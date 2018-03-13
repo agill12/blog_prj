@@ -1,24 +1,20 @@
 {% extends 'home/base.html' %}
 {% block content %}
-<div class="row">
-  <div class="col-md-12">
-      <div id='header'>
-          <h1>The Blog</h1>
-          </div>
-  </div>
-  </div>
+
   <div class="row">
       <div class="col-md-6 col-md-offset-3">
           
           {% for post in user.posts_made.all %}
           <div class="posttitle">
+                <a href={% url 'post_detail' post.id %} class="blog_links">
           {{ post.title }}
+          </a>
           </div>
           <div class="postbody">
-          {{ post.content|truncatewords:50 }}}
+          {{ post.content|truncatewords:50 }}
           </div>
           <div>
-            
+            <a href={% url 'post_detail' post.id %} class="blog_links">Continue Reading...</a>
           </div>
           
           {% endfor %}  
