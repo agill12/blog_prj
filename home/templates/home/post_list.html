@@ -12,6 +12,7 @@
           </div>
           <div class="postbody">
           {{ post.content|truncatewords:50 }}
+          
           </div>
           <div>
             <a href={% url 'post_detail' post.id %} class="blog_links">Continue Reading...</a>
