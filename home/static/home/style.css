@@ -13,7 +13,25 @@
     text-align: center
 }
 
+
+
+.posttitle{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    margin-top:5px;
+    font-weight: bold;
+    font-size:30px;
+}
+
+.postbody{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    margin-top:5px;
+}
+}
+
 #body{
     
 }
-
