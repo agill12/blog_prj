@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -26,9 +26,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><i class="fas fa-envelope"></i>
-
-Letters <i class="fas fa-envelope"></i>
+      <a class="navbar-brand" href="#"></i>
 
 </a>
     </div>
@@ -36,21 +34,21 @@ Letters <i class="fas fa-envelope"></i>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">About Us <span class="sr-only">(current)</span></a></li>
+        
         
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
           {% if user.is_authenticated %}
-                    <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
-                    <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
-                     <li><a href="{% url 'inbox' %}">
-                        <i class="fa fa-envelope"></i> Inbox 
-                        <label class="badge badge-warning">{{ unread_mail }}</label>
+                    <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                     <li><a href="#">
+                        <i class="#"></i> Create Post 
+                        <label class="badge badge-warning"></label>
                     </a></li>
                     {% else %}
-                    <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a></li>
-                    <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
+                    <li><a href="#"><i class="fa fa-user-plus"></i> Register</a></li>
+                    <li><a href="#"><i class="fa fa-sign-in"></i> Log In</a></li>
                     {% endif %}
             
       </ul>
