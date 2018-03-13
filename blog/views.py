@@ -16,7 +16,7 @@ def new_post(request):
         form=NewPostForm(request.POST)
         if form.is_valid():
             post=form.save(commit=False)
-            post.sender=request.user
+            post.author=request.user
             post.save()
             return redirect('home')
     else:
