@@ -25,7 +25,7 @@ SECRET_KEY = 'h8vlem=!j4j!(n0t7(vp)kd8lsm7y@)gqa-w5m!%!#zx43lm0n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['blog-prj-agill1.c9users.io']
+ALLOWED_HOSTS = ['blog-prj-agill1.c9users.io','blog-prj.herokuapp.com']
 
 
 # Application definition
