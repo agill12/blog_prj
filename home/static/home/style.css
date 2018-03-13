@@ -1,10 +1,18 @@
 #header{
     font-family: 'Russo One', sans-serif;
-    font-size: 50px
+    font-size: 50px;
+ 
     
 }
 
-
+.titlelink{
+     color:black;
+    text-decoration: none
+}
+ .titlelink:hover{
+     color:black;
+    text-decoration: none;
+}
 #subject{
     margin-top: 10px;
     font-size:20px;
@@ -31,16 +39,28 @@
     padding-bottom: 5px;
     margin-bottom: 5px;
     margin-top:5px;
+    line-height: 2.0;
 }
 .blog_links{
     
     color:black;
 }
+.blog_links:hover{
+     color:black;
+     text-decoration: underline green;
+   
+}
 .navbar-nav > li > a, .navbar-brand {
     padding-top:5px !important; padding-bottom:0 !important;
     height: 30px;
 }
-.navbar {min-height:30px !important;}
+.navbar {min-height:30px !important;
+    
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+
+}
 .navbar-toggle {
      padding: 0 0;
      margin-top: 7px;
@@ -49,5 +69,6 @@
 
 
 #body{
-    
+    line-height: 2.0;
 }
+

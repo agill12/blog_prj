@@ -1,5 +1,10 @@
 {% extends 'home/base.html' %}
+
 {% load bootstrap_tags %}
+{% block header %}
+
+  {% endblock  %}
+
 {% block content %}
 
   <div class="row" id="createpost">
@@ -14,6 +19,7 @@
          {{ form |as_bootstrap }}
          <input type="submit" value="Post"/>
          </form> 
+         <span><a href={% url 'home' %}> Return to Homepage</a></span>
     </div>
   </div>
 

@@ -43,8 +43,8 @@
           {% if user.is_authenticated %}
                     <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
                     <li><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
-                     <li><a href="#">
-                        <i class="#"></i> Create Post 
+                     <li><a href="{% url 'new_post' %}">
+                         Create Post 
                         <label class="badge badge-warning"></label>
                     </a></li>
                     {% else %}
@@ -66,13 +66,15 @@
         </div>
     {% endif %}
     <div class="container">
+         {% block header %}
         <div class="row">
   <div class="col-md-6 col-md-offset-3">
       <div id='header'>
-          <h1>The Blog</h1>
+          <a href={% url 'home' %} class="titlelink"><h1>The Blog</h1></a>
           </div>
   </div>
   </div>
+  {% endblock  %}
         {% block content %} {% endblock %}
     </div>
 </body>
