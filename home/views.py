@@ -5,8 +5,8 @@ from blog.models import Post
 
 # Create your views here.
 def get_index(request):
-    
-    return render(request, "home/post_list.html")
+    posts=Post.objects.all()
+    return render(request, "home/post_list.html",{'posts':posts})
     
     
  

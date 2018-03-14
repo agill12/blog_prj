@@ -5,6 +5,20 @@
     
 }
 
+#published{
+    margin-top: 15px;
+}
+
+#date{
+      margin-top: 15px;
+}
+
+#meta{
+    margin-top: 5px;
+    border-top:1px solid black;
+    border-bottom: 1px solid black;
+    
+}
 .titlelink{
      color:black;
     text-decoration: none
@@ -71,4 +85,3 @@
 #body{
     line-height: 2.0;
 }
-

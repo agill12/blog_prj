@@ -23,10 +23,25 @@ def new_post(request):
         form=NewPostForm()
     return render(request, 'blog/new_post.html',{'form':form})
     
- 
+def edit_panel(request):
+    
+    return render(request,'blog/edit_panel.html')
 
+def edit_post(request,id):
+    post_to_edit=get_object_or_404(Post,pk=id)
+    if request.method=='POST':
+        form=NewPostForm(request.POST,instance=post_to_edit)
+        if form.is_valid():
+            post=form.save(commit=False)
+            post.author=request.user
+            post.save()
+            return redirect('home')
+    else:
+        
+        form=NewPostForm(instance=post_to_edit)
+    return render(request, 'blog/edit_post.html',{'form':form})
+    
 
     
     
     
-   
