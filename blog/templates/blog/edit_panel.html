@@ -8,6 +8,7 @@
   <div class="row">
       <div class="col-md-6 col-md-offset-3">
           <h1>Click on a post to edit it.</h1>
+          
           {% for post in user.posts_made.all %}
           <div class="posttitle">
                 <a href={% url 'edit_post' post.id %} class="blog_links">

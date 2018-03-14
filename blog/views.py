@@ -15,7 +15,7 @@ def post_detail(request,id):
     
 def new_post(request):
     if request.method=='POST':
-        form=NewPostForm(request.POST)
+        form=NewPostForm(request.POST,request.FILES)
         if form.is_valid():
             post=form.save(commit=False)
             post.author=request.user
@@ -31,17 +31,22 @@ def edit_panel(request):
 
 def edit_post(request,id):
     post_to_edit=get_object_or_404(Post,pk=id)
-    if request.method=='POST':
-        form=NewPostForm(request.POST,instance=post_to_edit)
-        if form.is_valid():
-            post=form.save(commit=False)
-            post.author=request.user
-            post.save()
-            return redirect('home')
-    else:
+    if post_to_edit.author==request.user:
+        if request.method=='POST':
+            form=NewPostForm(request.POST,request.FILES,instance=post_to_edit)
+            if form.is_valid():
+               # post=form.save(commit=False)
+                #post.author=request.user
+                form.save()
+                return redirect('home')
+        form=NewPostForm(instance=post_to_edit)        
+        return render(request, 'blog/edit_post.html',{'form':form})    
+    return redirect('home')
         
-        form=NewPostForm(instance=post_to_edit)
-    return render(request, 'blog/edit_post.html',{'form':form})
+
+
+
+    
     
 
     

@@ -5,5 +5,5 @@ class NewPostForm(forms.ModelForm):
     
     class Meta:
         model=Post
-        fields=('title','content','tag')
+        fields=('title','content','tag','image')
     
