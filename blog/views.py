@@ -8,7 +8,9 @@ from .forms import NewPostForm
 def post_detail(request,id):
     item=get_object_or_404(Post,pk=id)
     item.read=True
+    item.views+=1
     item.save()
+    
     return render(request, "blog/post_detail.html",{'item':item})
     
 def new_post(request):
