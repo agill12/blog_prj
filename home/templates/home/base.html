@@ -50,7 +50,9 @@
                          Create Post 
                         <label class="badge badge-warning"></label>
                     </a></li>
-                    <li><a href="{% url 'edit_panel' %}"><i class="far fa-edit"></i></a></li>
+                    <li><a href={% url 'edit_panel' %}><i class="far fa-edit"></i> Edit Post</a></li>
+                    
+    
                     {% else %}
                     <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a></li>
                     <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>

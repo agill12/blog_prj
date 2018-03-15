@@ -1,26 +1,26 @@
-{% extends 'home/base.html' %}
+<!--{% extends 'home/base.html' %}-->
 
-{% load bootstrap_tags %}
-{% block header %}
+<!--{% load bootstrap_tags %}-->
+<!--{% block header %}-->
 
-  {% endblock  %}
+<!--  {% endblock  %}-->
 
-{% block content %}
+<!--{% block content %}-->
 
-  <div class="row" id="createpost">
-      <div class="col-md-6 col-md-offset-3">
-      <h1>Edit Post</h1>
-    </div>
-  </div>
-  <div class="row" >
-      <div class="col-md-6 col-md-offset-3">
-      <form method='POST'>
-         {% csrf_token %}
-         {{ form |as_bootstrap }}
-         <input type="submit" value="Post"/>
-         </form> 
-         <span><a href={% url 'home' %}> Return to Homepage</a></span>
-    </div>
-  </div>
+<!--  <div class="row" id="createpost">-->
+<!--      <div class="col-md-6 col-md-offset-3">-->
+<!--      <h1>Edit Post</h1>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="row" >-->
+<!--      <div class="col-md-6 col-md-offset-3">-->
+<!--      <form method='POST'>-->
+<!--         {% csrf_token %}-->
+<!--         {{ form |as_bootstrap }}-->
+<!--         <input type="submit" value="Post"/>-->
+<!--         </form> -->
+<!--         <span><a href={% url 'home' %}> Return to Homepage</a></span>-->
+<!--    </div>-->
+<!--  </div>-->
 
-{% endblock  %}
+<!--{% endblock  %}-->

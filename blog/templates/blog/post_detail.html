@@ -2,21 +2,29 @@
 
 <div class="row" id="subject">
     <div class="col-md-6 col-md-offset-3">
-        {{item.title}}
+        {{post.title}}
 
+    </div>
+</div>
+<div class="row" id="authorline">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="row">
+        <p class="col-md-6" id="author">Written by:{{post.author}} <span><a href='{% url 'edit_post' post.id %}'>(Edit)</a></span></p>
+        </div>
     </div>
 </div>
 <div class="row" id="image">
     <div class="col-md-6 col-md-offset-3">
-
-        <img src="{{MEDIA_URL}}{{item.image}}"></img>
-
+        
+    {% if post.image %}
+        <img src="{{MEDIA_URL}}{{post.image}}"></img>
+     {% endif %}
     </div>
 </div>
 <div class="row" id="body">
     <div class="col-md-6 col-md-offset-3">
 
-        {{item.content}}
+        <p>{{ post.content|linebreaksbr }}</p>
 
     </div>
 </div>
@@ -24,7 +32,7 @@
 <div id="meta"class="col-md-6 col-md-offset-3">
     <div class="row" id="published">
         <div class="col-md-6">
-            Published: {{item.created_date}}
+            Published: {{post.created_date}}
 
         </div>
     </div>
@@ -32,13 +40,13 @@
     <div class="row" id="date">
         <div class="col-md-6">
 
-            Tags: {{item.tag}}
+            Tags: {{post.tag}}
            
         </div>
     </div>
      <div class="row" id="views">
         <div class="col-md-6">
-            Views: {{item.views}}
+            Views: {{post.views}}
 
         </div>
     </div>

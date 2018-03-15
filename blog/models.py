@@ -18,11 +18,11 @@ class Post(models.Model):
     tag = models.CharField(max_length=30, blank=True, null=True)
     image = models.ImageField(upload_to="images", blank=True, null=True)
    
-    class Meta:
-        ordering = ['-created_date',]
-        # permissions = (
-        #     ('edit_item','Can edit item'),
-        # )
+    # class Meta:
+    #     ordering = ['-created_date',]
+    #     # permissions = (
+    #     #     ('edit_item','Can edit item'),
+    #     # )
 
         
     def publish(self):
