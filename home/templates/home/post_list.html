@@ -1,4 +1,5 @@
 {% extends 'home/base.html' %}
+{% load gravatar %}
 {% block header %}
         <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -28,7 +29,7 @@
           <div class=" row postbody">
             <div class="col-sm-3">
             <a class="story-img" href="#">
-                    <img src="http://via.placeholder.com/100x100" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" >
+                    <img src="{% gravatar_url post.author.email %}" style="width:100px; height: 100px; background-color: black; color: black; border: 1px solid grey;" > 
                 </a>
                 </div>
             <div class="col-md-9">  
